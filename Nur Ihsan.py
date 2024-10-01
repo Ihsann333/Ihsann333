@@ -19,7 +19,6 @@ while True:
         print("Anda Tidak Mendapatkan Bonus")
         print(f"Total gaji: {total_gaji}")
     
-    lanjut = input("Hitung gaji lagi? (iya/tidak): ").strip().lower()
-    if lanjut != 'iya':
-        print("Terima kasih! Program selesai.")
+   if input("Apakah anda ingin menghitung ulang gaji? (iya/tidak): ") !="iya":
+        print("Terima kasih, program selesai")
         break
