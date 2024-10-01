@@ -32,7 +32,7 @@ print("Anda Tidak Mendapatkan Bonus")
 print(f"Total gaji: {total_gaji}")
 Penjelasan: Mencetak total gaji tanpa bonus jika jam kerja tidak lebih dari 160.
 Kode 17-20 (Akhir Program):
-lanjut = input("Hitung gaji lagi? (iya/tidak): ").strip().lower()
+lanjut = input("Hitung gaji lagi? (iya/tidak): ").
 if lanjut != 'iya':
 print("Terima kasih! Program selesai.")
 break
