@@ -5,35 +5,59 @@ Nur Ihsan 2409116051 Sistem Informasi kelas B
 Kode 1-2 (Login):
 Nama = input("Masukkan Nama: ")
 NIM = input("Masukkan NIM: ")
-Penjelasan: Meminta dan menyimpan nama dan NIM pengguna.
-Kode 3-4 (Sambutan):
+Penjelasan: 
+1. Input Nama dan NIM:
+
+Nama = input("Masukkan Nama: ")
+NIM = input("Masukkan NIM: ")
+
+Bagian ini meminta input dari pengguna untuk memasukkan nama dan NIM. Fungsi input() digunakan untuk membaca data yang dimasukkan oleh pengguna.
+
+2. Menyapa pengguna:
+
 print("Halo, Selamat Datang", Nama)
 print("NIM Kamu adalah", NIM)
-Penjelasan: Mencetak sambutan dan menampilkan NIM pengguna.
-Kode 5-7 (Awal Loop dan Input):
+
+Setelah pengguna memasukkan nama dan NIM, program menyapa pengguna dengan menampilkan pesan "Halo, Selamat Datang" diikuti dengan nama, dan "NIM Kamu adalah" diikuti dengan NIM yang telah dimasukkan sebelumnya.
+
+3. Perulangan (Looping):
+
 while True:
+
+Program masuk ke dalam perulangan tak terbatas (while True:). Ini berarti program akan terus mengulang sampai pengguna secara eksplisit menghentikannya dengan memilih untuk tidak menghitung ulang gaji di bagian bawah kode.
+
+4. Input Gaji Per Jam dan Jam Kerja:
+
 gaji_kerja = int(input('Masukkan Gaji Per Jam: '))
 jam_kerja = int(input('Masukkan Jam Kerja: '))
-Penjelasan: Memulai loop tak terbatas dan meminta input gaji per jam dan jam kerja.
-Kode 8-9 (Perhitungan Gaji):
+
+Program meminta pengguna untuk memasukkan gaji per jam dan jumlah jam kerja yang mereka lakukan. Kedua input ini dikonversi menjadi tipe data int (integer) agar bisa digunakan dalam perhitungan matematis.
+
+5. Menghitung Total Gaji:
+
 total_gaji = jam_kerja * gaji_kerja
-    
+
+Program menghitung total gaji dengan mengalikan jumlah jam kerja (jam_kerja) dengan gaji per jam (gaji_kerja). Hasilnya disimpan dalam variabel total_gaji.
+
+6. Mengecek Jam Kerja dan Menghitung Bonus (Jika Ada):
+
 if jam_kerja > 160:
-Penjelasan: Menghitung total gaji dan memeriksa apakah jam kerja lebih dari 160.
-Kode 10-13 (Perhitungan Bonus):
-bonus = total_gaji * 0.1
-total_gaji += bonus
-print(f"Anda Mendapatkan Bonus: {bonus}")
-print(f"Total gaji (termasuk bonus): {total_gaji}")
-Penjelasan: Menghitung bonus, menambahkannya ke total gaji, dan mencetak hasilnya.
-Kode 14-15 (Tanpa Bonus):
+    bonus = total_gaji * 0.1
+    total_gaji += bonus
+    print(f"Anda Mendapatkan Bonus: {bonus}")
+    print(f"Total gaji (termasuk bonus): {total_gaji}")
 else:
-print("Anda Tidak Mendapatkan Bonus")
-print(f"Total gaji: {total_gaji}")
-Penjelasan: Mencetak total gaji tanpa bonus jika jam kerja tidak lebih dari 160.
-Kode 17-20 (Akhir Program):
-lanjut = input("Hitung gaji lagi? (iya/tidak): ").
-if lanjut != 'iya':
-print("Terima kasih! Program selesai.")
-break
-Penjelasan: Menanyakan apakah pengguna ingin menghitung lagi. Jika tidak, program berakhir.
+    print("Anda Tidak Mendapatkan Bonus")
+    print(f"Total gaji: {total_gaji}")
+
+Program mengecek apakah jumlah jam kerja lebih dari 160 jam. Jika iya (if jam_kerja > 160:), maka pengguna akan mendapatkan bonus sebesar 10% dari total gaji (total_gaji * 0.1). Bonus ditambahkan ke total gaji, dan pesan yang menunjukkan jumlah bonus serta total gaji yang diperoleh ditampilkan.
+
+Jika jam kerja tidak lebih dari 160 jam (else), program hanya menampilkan total gaji tanpa bonus.
+
+7. Menanyakan Pengguna Apakah Ingin Menghitung Ulang:
+
+if input("Apakah anda ingin menghitung ulang gaji? (iya/tidak): ") != "iya":
+    print("Terima kasih, program selesai")
+    break
+
+Setelah menampilkan hasil perhitungan, program akan bertanya kepada pengguna apakah mereka ingin menghitung ulang gaji. Jika pengguna mengetikkan "iya", program akan mengulangi perhitungan. Jika tidak, program akan menampilkan pesan "Terima kasih, program selesai" dan perulangan akan dihentikan menggunakan perintah break.
